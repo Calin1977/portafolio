@@ -2,32 +2,38 @@
     <div class="ae-grid ae-grid--collapse">
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
             <ul class="rk-menu rk-footer-menu">
-                <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Madis</a>
+                <li class="rk-menu__item">
+                    <a routerLink="about" class="rk-menu__link">Acerca</a>
                 </li>
-                <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Directorio</a>
+                <li class="rk-menu__item">
+                    <a routerLink="home" class="rk-menu__link">Portafolio</a>
                 </li>
-                <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Contacto</a>
+                <li class="rk-menu__item">
+                    <a routerLink="contact" class="rk-menu__link">Contacto</a>
                 </li>
             </ul>
-            <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} MADIS PORTFOLIO </span>All Right Reserved.</p>
+            <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span><span class="ae-u-bolder">{{anio}} {{ infoPaginaService.info.nombre_corto }} </span>All Right Reserved.</p>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-            <a href="#0" class="rk-social-btn ">
+            <a [href]="infoPaginaService.info.facebook" class="rk-social-btn ">
                 <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
-        </svg></a>
-            <a href="#0" class="rk-social-btn ">
+                    <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a [href]="infoPaginaService.info.twitter" class="rk-social-btn ">
                 <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
-        </svg></a>
-            <a href="#0" class="rk-social-btn ">
+                    <use xlink:href="assets/img/symbols.svg#icon-twitter "></use>
+                </svg>
+            </a>
+            <a [href]="infoPaginaService.info.instagram " class="rk-social-btn ">
                 <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
-        </svg></a>
+                    <use xlink:href="assets/img/symbols.svg#icon-pinterest "></use>
+                </svg>
+            </a>
         </div>
-        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">contacto@madis.com.mx </a></span></p>
-            <p class="rk-footer__text rk-footer__by">Designed by <a href="http://www.madis.com.mx" class="ae-u-bolder">Marketing Digital del Sureste S.A. de C.V.</a></p>
+        <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right ">
+            <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold ">Email: </span><span class="ae-u-bolder "> <a [href]="'mailto:' + infoPaginaService.info.email" class="rk-dark-color ">{{ infoPaginaService.info.email }}</a></span></p>
+            <p class="rk-footer__text rk-footer__by ">Developed by <a [href]="infoPaginaService.info.pagina_autor " class="ae-u-bolder ">{{ infoPaginaService.info.nombre_completo }}</a></p>
         </div>
     </div>
 </footer>
