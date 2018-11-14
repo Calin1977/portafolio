@@ -26,14 +26,14 @@
                 </li>
             </ul>
 
-            <form class="rk-search">
-                <input type="text" placeholder="Buscar" id="urku-search" class="rk-search-field">
+            <div class="rk-search">
+                <input #txtBuscar type="text" (keyup.enter)="buscarProducto(txtBuscar.value)" placeholder="Buscar..." id="urku-search" class="rk-search-field">
                 <label for="urku-search">
                   <svg>
                     <use xlink:href="assets/img/symbols.svg#icon-search"></use>
                   </svg>
                 </label>
-            </form>
+            </div>
         </nav>
     </div>
 </header>
